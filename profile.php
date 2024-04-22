@@ -1,8 +1,15 @@
+<?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/signup.view.inc.php';
+require_once 'includes/login_view.inc.php';
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Profile</title>
-        <link rel="stylesheet" type="text/css" href="public/styles.css">
+        <link rel="stylesheet" type="text/css" href="public\styles2.css">
 
         <script src="scripts.js"></script>
 
@@ -17,50 +24,61 @@
             </ul>
         </header>
         <h1>PROFILE</h1>
-        <h2>Modal Signup Form</h2> 
+        <h2>Modal Signup Form a a a a</h2> 
     <!--Step 1:Adding HTML-->
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> 
   
     <div id="id01" class="modal"> 
-        <form class="modal-content signup" action="/action_page.php"> 
-            <div class="container"> 
-                <label><b>Email</b></label> 
-                <input type="text" placeholder="Enter Email" name="email" required> 
+        <form class="modal-content signup" action="includes\signup.inc.php" method="post"> 
+                <label for = "username"><b>Username</b></label> 
+                <input id = "username" type="text" placeholder="Enter Username" name="username" >
+
+                <label for = "email"><b>Email</b></label> 
+                <input id = "email" type="text" placeholder="Enter Email" name="email" > 
   
-                <label><b>Password</b></label> 
-                <input type="password" placeholder="Enter Password" name="psw" required> 
+                <label for = "password"><b>Password</b></label> 
+                <input id = "password" type="password" placeholder="Enter Password" name="psw" > 
   
-                <label><b>Repeat Password</b></label> 
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required> 
+                <label for = "repeatpass"><b>Repeat Password</b></label> 
+                <input id = "repeatpass" type="password" placeholder="Repeat Password" name="psw-repeat" > 
                 <input type="checkbox"> Remember me 
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
   
                 <div class="clearfix"> 
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
                     <button type="submit" class="signupbtn">Sign Up</button> 
-                </div> 
             </div> 
         </form>
+
+        <?php
+            check_signup_errors();
+        ?>
+
         </div>
         <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button> 
   
     <div id="id02" class="modal"> 
-        <form class="modal-content login" action="/action_page.php"> 
-            <div class="container"> 
-                <label><b>Email</b></label> 
-                <input type="text" placeholder="Enter Email" name="email" required> 
+        <form class="modal-content login" action="includes\login.inc.php"> 
+                <label for = "username"><b>username</b></label> 
+                <input type="text" placeholder="Enter Username" name="username"> 
   
-                <label><b>Password</b></label> 
-                <input type="password" placeholder="Enter Password" name="psw" required> 
+                <label for = "password"><b>Password</b></label> 
+                <input type="password" placeholder="Enter Password" name="psw"> 
    
                 <input type="checkbox"> Remember me 
   
                 <div class="clearfix"> 
                     <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button> 
                     <button type="submit" class="signupbtn">Login</button> 
-                </div> 
+
             </div> 
         </form> 
+
+        <?php
+            check_login_errors();
+        ?>
     </div> 
+
+
     </body>
 </html>

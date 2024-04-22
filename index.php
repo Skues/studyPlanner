@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="public/styles.css">
+        <link rel="stylesheet" type="text/css" href="public\styles2.css">
 
     </head>
     <body>
@@ -13,6 +13,8 @@
                 <li><a href="profile.php">Profile</a></li>
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->
             </ul>
+
+            
         </header>
         <h1>Testing head</h1>
         <p>testing paragraph</p>
