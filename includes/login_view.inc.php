@@ -10,8 +10,9 @@ function check_login_errors(){
         echo "<br>";
 
         foreach($errors as $error){
-            echo "<p>".$error."</p>";
+            echo "<p class 'form error'>".$error."</p>";
         }
+        unset($_SESSION["errors_login"]);
     
     } else if(isset($_GET["login"]) && $_GET["login"] === "sucess"){
         echo "<br>";

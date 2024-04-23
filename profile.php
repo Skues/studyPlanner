@@ -37,7 +37,7 @@ require_once 'includes/login_view.inc.php';
                 <input id = "email" type="text" placeholder="Enter Email" name="email" > 
   
                 <label for = "password"><b>Password</b></label> 
-                <input id = "password" type="password" placeholder="Enter Password" name="psw" > 
+                <input id = "password" type="password" placeholder="Enter Password" name="pwd" > 
   
                 <label for = "repeatpass"><b>Repeat Password</b></label> 
                 <input id = "repeatpass" type="password" placeholder="Repeat Password" name="psw-repeat" > 
@@ -50,20 +50,18 @@ require_once 'includes/login_view.inc.php';
             </div> 
         </form>
 
-        <?php
-            check_signup_errors();
-        ?>
+       
 
         </div>
         <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button> 
   
     <div id="id02" class="modal"> 
-        <form class="modal-content login" action="includes\login.inc.php"> 
+        <form class="modal-content login" action="includes\login.inc.php"  method="post"> 
                 <label for = "username"><b>username</b></label> 
                 <input type="text" placeholder="Enter Username" name="username"> 
   
                 <label for = "password"><b>Password</b></label> 
-                <input type="password" placeholder="Enter Password" name="psw"> 
+                <input type="password" placeholder="Enter Password" name="pwd"> 
    
                 <input type="checkbox"> Remember me 
   
@@ -74,11 +72,14 @@ require_once 'includes/login_view.inc.php';
             </div> 
         </form> 
 
-        <?php
-            check_login_errors();
-        ?>
+        
+           
+        
     </div> 
-
+    <?php
+            check_signup_errors();
+         check_login_errors();
+         ?>
 
     </body>
 </html>
