@@ -15,7 +15,7 @@
             </ul>
         </header>
         <h1>DASHBOARD</h1>
-        <p>testing paragraph</p>
+        <h2>Upcoming Deadlines:</h2>
 
     </body>
 </html>
