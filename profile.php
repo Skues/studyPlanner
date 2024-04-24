@@ -16,7 +16,9 @@ require_once 'includes/login_view.inc.php';
     </head>
     <body>
         <header>
-            <ul>
+        <nav class = "navbar">
+                <img src = "websiteTestLogo.png" alt = "Test logo">
+            <ul class = "navlinks">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a class = "active" href="profile.php">Profile</a></li>

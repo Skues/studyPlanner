@@ -6,7 +6,9 @@
 </head>
 <body>
     <header>
-        <ul>
+    <nav class = "navbar">
+                <img src = "websiteTestLogo.png" alt = "Test logo">
+            <ul class = "navlinks">
             <li><a href="index.php">Home</a></li>
             <li><a class="active" href="dashboard.php">Dashboard</a></li>
             <li><a href="profile.php">Profile</a></li>
