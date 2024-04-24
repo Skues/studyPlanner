@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="public\styles2.css">
+        <link rel="stylesheet" type="text/css" href="styles2.css">
 
     </head>
     <body>
