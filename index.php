@@ -7,12 +7,15 @@
     </head>
     <body>
         <header>
-            <ul>
+            <nav class = "navbar">
+                <img src = "websiteTestLogo.png" alt = "Test logo">
+            <ul class = "navlinks">
                 <li><a class = "active" href="index.php">Home</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->
             </ul>
+            </nav>
 
             
         </header>

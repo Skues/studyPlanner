@@ -1,4 +1,41 @@
+img {
+    width: 200px;
+    height: 60px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+
+  .navlinks {
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  }
+
+  .navlinks li {
+    
+    /* display: block; */
+    margin-left: 0px;
+
+  }
+
+  .navlinks li a {
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: large;
+  }
 ul {
+    
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -7,15 +44,16 @@ ul {
 }
 
 li {
-  float: left;
+  float: right;
 }
 
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 20px;
   text-decoration: none;
+  font-size: large;
 }
 
 /* Change the link color to #111 (black) on hover */
