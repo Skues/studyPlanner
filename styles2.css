@@ -107,6 +107,11 @@ button {
     clear: both; 
     display: table; 
 } 
+
+.section-gap {
+    margin-top: 300px; 
+}
+
   
 @media screen and (max-width: 600px) { 
     .cancelbtn, 
