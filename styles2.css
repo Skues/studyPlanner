@@ -130,6 +130,11 @@ button {
     margin-top: 300px; 
 }
 
+.upcoming-deadlines-header,
+.past-deadlines-header {
+    font-family: 'Segoe UI', sans-serif;
+}
+
 .oval {
     position: relative;
     width: 300px; 
