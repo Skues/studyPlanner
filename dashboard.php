@@ -3,7 +3,7 @@
 <head>
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="styles2.css">
-    <script src="dashboard.js" defer></script>
+    <script src="dashboard.js?v=1" defer></script>
 </head>
 <body>
     <header>
@@ -31,3 +31,4 @@
     <h2 class="past-deadlines-header">Past Deadlines:</h2>
 </body>
 </html>
+
