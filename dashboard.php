@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="styles.css">   
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="styles2.css">
-    <script src="dashboard.js?v=1" defer></script>
-</head>
-<body>
     <header>
         <nav class="navbar">
             <img src="websiteTestLogo.png" alt="Test logo">
@@ -17,18 +16,21 @@
             </ul>
         </nav>
     </header>
-    <h1>DASHBOARD</h1>
-    <h2 class="upcoming-deadlines-header">Upcoming Deadlines:</h2>
-    <div class="oval">
-        <h3>Upcoming Deadline 1</h3>
-        <p>Due: 18th June 2024</p>
-        <div class="progress-bar">
-            <div class="progress"></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
-    <div class="section-gap"></div>
-    <h2 class="past-deadlines-header">Past Deadlines:</h2>
+</head>
+<body>
+    <input type="file" id="fileInput" accept=".json" multiple onchange="handleFile(this.files)">
+    <h2 class="collapsible">UPLOADED DATA</h2>
+    <div class="content" id="moduleList"></div>
+
+    <h2>Upcoming Deadlines:</h2>
+    <div class="upcoming-deadlines"></div>
+    <div class="section-gap-lesser"></div>
+
+    <h2>Past Deadlines:</h2>
+    <div class="past-deadlines"></div>
+    <div class="tasks-container"> </div>
+
+    <script src="dashboard.js"></script>
 </body>
 </html>
 
