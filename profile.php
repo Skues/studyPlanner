@@ -42,9 +42,6 @@ require_once 'includes/login_view.inc.php';
                 <label for = "password"><b>Password</b></label> 
                 <input id = "password" type="password" placeholder="Enter Password" name="pwd" > 
   
-                <label for = "repeatpass"><b>Repeat Password</b></label> 
-                <input id = "repeatpass" type="password" placeholder="Repeat Password" name="psw-repeat" > 
-                <input type="checkbox"> Remember me 
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
   
                 <div class="clearfix"> 
@@ -80,7 +77,7 @@ require_once 'includes/login_view.inc.php';
         
     </div> 
     <?php
-            check_signup_errors();
+        check_signup_errors();
          check_login_errors();
          ?>
 
