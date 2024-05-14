@@ -47,8 +47,7 @@ li a:hover {
 
 
 /*add full-width input fields*/ 
-input[type=text], 
-input[type=password] { 
+.modal-content >input { 
     width: 100%; 
     padding: 12px 20px; 
     margin: 8px 0; 
@@ -58,24 +57,29 @@ input[type=password] {
 } 
 /* set a style for all buttons*/ 
 button { 
-    background-color: green; 
     color: white; 
     padding: 14px 20px; 
     margin: 8px 0; 
     cursor: pointer; 
+    
 } 
 /*set styles for the cancel button*/ 
 .cancelbtn { 
-    padding: 14px 20px; 
+    
+    
     background-color: #FF2E00; 
 } 
+.signupbtn{
+    background-color: green;
+}
 /*float cancel and signup buttons and add an equal width*/ 
 .cancelbtn, 
 .signupbtn { 
-    float: left; 
-    width: 50% 
+    
+    cursor: pointer;
+    width: 49%; 
 } 
-/*add padding to container elements*/ 
+
 
 /*define the modal’s background*/ 
   
@@ -219,3 +223,33 @@ body {
     font-weight: 600;
 }
 
+.studytask{
+    display: inline-block;
+}
+.studytasklabel{
+    display: block;
+}
+.studytask > input{
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 2px solid #ccc; 
+    box-sizing: border-box; 
+}
+select{
+    width: 200px; /* Set your desired width */
+    height: 42px;
+    padding: 5px; /* Adjust padding to fit your design */
+    text-align: left;
+
+}
+
+#notes {
+    width: 400px;
+    height: 200px;
+    padding: 8px;
+    margin: 8px 0;
+    line-height: 1; /* Set line-height to 1 to align text to the top */
+    resize: none;
+}
