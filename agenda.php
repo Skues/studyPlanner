@@ -36,6 +36,7 @@
 <div class = "studytask">
     <label class = "studytasklabel">Type of task</label>
     <select name="typeoftask" id="typeoftask">
+        <option selected>Select a type of task</option>
         <option value="writing">Writing</option>
         <option value="programming">Programming</option>
         <option value="research">Research</option>
