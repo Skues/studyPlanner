@@ -21,6 +21,7 @@ require_once 'includes/login_view.inc.php';
             <ul class = "navlinks">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="agenda.php">Agenda</a></li>
                 <li><a class = "active" href="profile.php">Profile</a></li>
                 <li><a href="jsontest.php">JSON TEST</a></li>
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->

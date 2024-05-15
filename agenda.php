@@ -12,8 +12,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a class = "active" href="agenda.php">Agenda</a></li>
-
                 <li><a href="profile.php">Profile</a></li>
+                <li><a href="jsontest.php">JSON TEST</a></li>
                 <!--<li class="logout"><a href="#logout">Logout</a></li>-->
             </ul>
         </nav>
