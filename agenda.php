@@ -47,7 +47,7 @@
     <label class= "studytasklabel">Requirement criterion</label>
     <input type ="text"/>
 </div>
-
+<br>
 <textarea id = "notes" placeholder="Enter your notes here:" rows="5" cols="50"></textarea>
 <br>
 <button>Submit</button>
