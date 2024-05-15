@@ -1,0 +1,21 @@
+CREATE DATABASE mydatabase;
+
+USE mydatabase;
+
+CREATE TABLE users(
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(30) NOT NULL,
+    pwd VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE json_files (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    file_name VARCHAR(255) NOT NULL,
+    json_data LONGTEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

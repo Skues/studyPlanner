@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-function is_input_empty(string $username, string $email,string  $pwd){
-    if(empty($username) || empty($email) || empty($pwd)){
+function is_input_empty(string $username, string $email,string  $pwd,string  $repeatpwd){
+    if(empty($username) || empty($email) || empty($pwd) || empty($repeatpwd)){
         return true;
     }
     else{

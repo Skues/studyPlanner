@@ -1,35 +1,43 @@
 let uploadedFiles = [];
 let allDeadlines = [];
 
-function handleFile(files) {
-    let upcomingDeadlines = [];
-    let pastDeadlines = [];
 
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        if (!uploadedFiles.includes(file.name)) {
-            uploadedFiles.push(file.name);
-            const reader = new FileReader();
+function handleDatabaseData(filesArray) {
+    filesArray.forEach(files => {
+        let upcomingDeadlines = [];
+        let pastDeadlines = [];
+        console.log("this is files: ", files.modules);
+        console.log("this is files length: ", files.modules.length);
 
-            reader.onload = function(event) {
-                const contents = event.target.result;
-                const data = JSON.parse(contents);
-                extractDeadlines(data.modules, upcomingDeadlines, pastDeadlines);
-                displayModules(data.modules, file.name);
-                allDeadlines = allDeadlines.concat(upcomingDeadlines, pastDeadlines);
-                sortDeadlines();
-                displayDeadlines();
-            };
-
-            reader.readAsText(file);
-        } else {
-            alert("File " + file.name + " has already been uploaded.");
+        for (let i = 0; i < files.modules.length; i++) {
+            const module = files.modules[i];
+            console.log("this is module: ", module);
+            console.log("this is module: ", module.module_name);
+            console.log("this is module: ", module.module_code);
         }
-    }
+        extractDeadlines(files.modules, upcomingDeadlines, pastDeadlines);
+        displayModules(files.modules, files.module_name);
+        allDeadlines = allDeadlines.concat(upcomingDeadlines, pastDeadlines);
+    });
+
+    sortDeadlines();
+    displayDeadlines();
+}
+
+function fetchDataFromDatabase() {
+    return fetch('jsonget.php')
+        .then(response => response.json())
+        .then(data => handleDatabaseData(data))
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+function handleFileFromDatabase() {
+    fetchDataFromDatabase();
 }
 
 function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
     const currentDate = new Date();
+    console.log(modules);
     modules.forEach(module => {
         module.coursework.forEach(coursework => {
             const deadlineDate = new Date(coursework.deadline);
@@ -168,3 +176,4 @@ function displayModules(modules, fileName) {
 }
 
 document.querySelector('.collapsible').addEventListener('click', toggleContent);
+document.addEventListener('DOMContentLoaded', handleFileFromDatabase);
