@@ -27,15 +27,23 @@
 <form id = "taskform" action = "submittask.php" method = "post">
 <div class = "studytask">
     <label class = "studytasklabel">Task name</label>
-    <input type ="text"/>
+    <input type ="text" name = "taskname"/>
+</div>
+<div class = "studytask">
+    <label class = "studytasklabel">Start date</label>
+    <input type ="date" name = "taskstart"/>
+</div>
+<div class = "studytask">
+    <label class = "studytasklabel">End date</label>
+    <input type ="date" name = "taskend"/>
 </div>
 <div class = "studytask">
     <label class = "studytasklabel">Time spent</label>
-    <input type ="text"/>
+    <input type ="text" name = "timespent"/>
 </div>
 <div class = "studytask">
     <label class = "studytasklabel">Type of task</label>
-    <select name="typeoftask" id="typeoftask">
+    <select name="typeoftask" id="typeoftask" name = "typetask">
         <option selected>Select a type of task</option>
         <option value="writing">Writing</option>
         <option value="programming">Programming</option>
@@ -45,14 +53,17 @@
 </div>
 <div class = "studytask">
     <label class= "studytasklabel">Requirement criterion</label>
-    <input type ="text"/>
+    <input type ="text" name = "requirement"/>
 </div>
 <br>
-<textarea id = "notes" placeholder="Enter your notes here:" rows="5" cols="50"></textarea>
+<textarea name = "notes" id = "notes" placeholder="Enter your notes here:" rows="5" cols="50"></textarea>
 <br>
 <button>Submit</button>
-</form>
 
+</form>
+<a href="http://localhost/studyPlanner/gettask.php">
+  <button>Click me</button>
+</a>
 
 
 </body>

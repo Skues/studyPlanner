@@ -48,6 +48,7 @@ function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
                 moduleName: module.module_name,
                 tasks: coursework.tasks
             };
+
             if (deadlineDate > currentDate) {
                 upcomingDeadlines.push(deadline);
             } else {
@@ -87,6 +88,32 @@ function displayDeadlines() {
         }
         deadlineItem.appendChild(tasksList);
     });
+}
+
+function showTasks2() {
+    console.log("b array print");
+    fetch("gettask.php")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.length); // Log the fetched data
+            for (let i = 0; i < data.length; i++){
+                const ul = document.getElementById("taskarraytest"); 
+                const node = document.createElement("li");
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                const text = document.createElement("label");
+                text.textContent = data[i].task_name;
+            
+                node.appendChild(checkbox);
+                node.appendChild(text);
+                ul.appendChild(node);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    console.log("after array print");
+    
 }
 
 function showTasks(tasks, deadlineItem) {
@@ -175,5 +202,6 @@ function displayModules(modules, fileName) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', showTasks2);
 document.querySelector('.collapsible').addEventListener('click', toggleContent);
 document.addEventListener('DOMContentLoaded', handleFileFromDatabase);

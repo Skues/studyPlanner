@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
 <link rel="stylesheet" href="styles2.css">   
+
 <head>
     <header>
         <nav class="navbar">
@@ -20,6 +21,9 @@
     </header>
 </head>
 <body>
+
+    <ul id = "taskarraytest"></ul>
+
     <input type="file" id="fileInput" accept=".json" multiple onchange="handleFile(this.files)">
     <h2 class="collapsible">UPLOADED DATA</h2>
     <div class="content" id="moduleList"></div>
@@ -32,8 +36,8 @@
     <div class="past-deadlines"></div>
     <div class="tasks-container"> </div>
     <div class="DivID"> </div>
-
     <script src="dashboard.js"></script>
+
 </body>
 </html>
 

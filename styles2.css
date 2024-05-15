@@ -57,15 +57,18 @@ li a:hover {
 } 
 /* set a style for all buttons*/ 
 button { 
-    color: white; 
+    /* color: white;  */
     padding: 14px 20px; 
     margin: 8px 0; 
     cursor: pointer; 
 } 
 /*set styles for the cancel button*/ 
 .cancelbtn { 
-    background-color: #FF2E00; 
+    background-color: red; 
 } 
+.signupbtn{
+    background-color: green;
+}
 /*float cancel and signup buttons and add an equal width*/ 
 .cancelbtn, 
 .signupbtn { 
