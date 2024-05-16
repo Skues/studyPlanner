@@ -8,7 +8,7 @@
 <head>
     <header>
     <nav class = "navbar">
-                <img src = "images\websiteTestLogo.png" alt = "Test logo">
+                <img src = "images\websiteTestLogo.png" alt = "Test logo" class= "logo">
             <ul class = "navlinks">
                 <li><a href="index.php">Home</a></li>
                 <li><a class = "active" href="dashboard.php">Dashboard</a></li>

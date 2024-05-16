@@ -1,4 +1,4 @@
-img {
+.logo {
     width: 200px;
     height: 60px;
 }
@@ -368,10 +368,15 @@ mark.title{
 
 
 .imageCentre {
+    padding-top: 100px;
     display: flex;
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     
+}
+.imageCentre > img{
+    width: 200px;
+    height: 60px;
 }
 
 
