@@ -26,8 +26,6 @@
 
     <ul id = "taskarraytest"></ul>
 
-    <input type="file" id="fileInput" accept=".json" multiple onchange="handleFile(this.files)">
-    <h2 class="collapsible">UPLOADED DATA</h2>
     <div class="content" id="moduleList"></div>
 
     <h2>Upcoming Deadlines:</h2>

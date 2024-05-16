@@ -20,8 +20,6 @@ img {
   }
 
   .navlinks li {
-    
-    /* display: block; */
     margin-left: 0px;
 
   }
@@ -36,7 +34,7 @@ img {
   }
 
 
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
   background-color: #111;
 }
@@ -46,7 +44,7 @@ li a:hover {
   }
 
 
-/*add full-width input fields*/ 
+
 .modal-content > input{
     width: 100%; 
     padding: 12px 20px; 
@@ -55,29 +53,27 @@ li a:hover {
     border: 2px solid #ccc; 
     box-sizing: border-box; 
 } 
-/* set a style for all buttons*/ 
+
 button { 
     /* color: white;  */
     padding: 14px 20px; 
     margin: 8px 0; 
     cursor: pointer; 
 } 
-/*set styles for the cancel button*/ 
+
 .cancelbtn { 
     background-color: red; 
 } 
 .signupbtn{
     background-color: green;
 }
-/*float cancel and signup buttons and add an equal width*/ 
+
 .cancelbtn, 
 .signupbtn { 
     cursor: pointer;
     width: 49%;
 } 
-/*add padding to container elements*/ 
 
-/*define the modal’s background*/ 
   
 .modal { 
     display: none; 
@@ -92,7 +88,6 @@ button {
     background-color: rgba(0, 0, 0, 0.4); 
     padding-top: 60px; 
 } 
-/*define the modal-content background*/ 
   
 .modal-content { 
     padding: 16px;
@@ -101,7 +96,6 @@ button {
     border: 1px solid #888; 
     width: 80%; 
 } 
-/*define the close button*/ 
   
 .close { 
     position: absolute; 
@@ -111,7 +105,6 @@ button {
     font-size: 40px; 
     font-weight: bold; 
 } 
-/*define the close hover and focus effects*/ 
   
 .close:hover, 
 .close:focus { 
@@ -234,9 +227,9 @@ body {
     box-sizing: border-box; 
 }
 select{
-    width: 200px; /* Set your desired width */
+    width: 200px; 
     height: 42px;
-    padding: 5px; /* Adjust padding to fit your design */
+    padding: 5px; 
     text-align: left;
 
 }
@@ -246,6 +239,12 @@ select{
     height: 200px;
     padding: 8px;
     margin: 8px 0;
-    line-height: 1; /* Set line-height to 1 to align text to the top */
+    line-height: 1; 
     resize: none;
+}
+
+.tasklabel{
+    padding: 8px;
+    border: 2px solid #ccc;
+    display: inline-block;
 }

@@ -42,14 +42,13 @@
     <input type ="text" name = "timespent"/>
 </div>
 <div class = "studytask">
-    <label class = "studytasklabel">Type of task</label>
-    <select name="typeoftask" id="typeoftask" name = "typetask">
-        <option selected>Select a type of task</option>
-        <option value="writing">Writing</option>
-        <option value="programming">Programming</option>
-        <option value="research">Research</option>
-        <option value="reading">Reading</option>
-    </select>
+    <label for="typeoftask">Type of task:</label>
+        <select name="typeoftask" id="typeoftask">
+            <option value="writing">Writing</option>
+            <option value="programming">Programming</option>
+            <option value="research">Research</option>
+            <option value="reading">Reading</option>
+        </select>
 </div>
 <div class = "studytask">
     <label class= "studytasklabel">Requirement criterion</label>

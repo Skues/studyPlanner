@@ -28,8 +28,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $requirement = $_POST["requirement"];
     $notes = $_POST["notes"];
 
-    $module_code = "M123";
-    $cw_name = "cw123";
+    $module_code = "CS201";
+    $cw_name = "Project";
     $task_done = 0;
 
     $sql = "INSERT INTO tasks (user_id, module_code, cw_name, task_name, task_start, task_end, task_timespent, task_type, requirement, notes, task_done) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $stmt->execute();
     $stmt->close();
 
-    
+    header("Location: dashboard.php");
 }
 
 $conn->close();
