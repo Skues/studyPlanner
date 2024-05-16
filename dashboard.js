@@ -38,15 +38,38 @@ function handleFileFromDatabase() {
 function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
     const currentDate = new Date();
     console.log(modules);
-    modules.forEach(module => {
+
+    modules.forEach((module) => {
         module.coursework.forEach(coursework => {
             const deadlineDate = new Date(coursework.deadline);
+            let taskArray = [];
+            let taskNotesArray = [];
+            console.log("b array print");
+            fetch("gettask.php")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.length); // Log the fetched data
+                    console.log(coursework.name)
+                    console.log(module.module_code)
+                    for (let i = 0; i < data.length; i++){
+                        if (data[i].module_code == module.module_code && data[i].cw_name == coursework.name){
+                            taskArray.push({name : data[i].task_name, notes: data[i].notes});
+                            // taskNotesArray.push(data[i].notes)
+                        }
+                    }
+
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+            console.log("after array print");
             const deadline = {
                 name: coursework.name,
                 deadline: deadlineDate,
                 moduleCode: module.module_code,
                 moduleName: module.module_name,
-                tasks: coursework.tasks
+                tasks: taskArray,
+                // notes: taskNotesArray
             };
 
             if (deadlineDate > currentDate) {
@@ -148,9 +171,14 @@ function showTasks(tasks, deadlineItem) {
                 updateProgressBar(progressBar, completedTasks, totalTasks);
             });
             const label = document.createElement('label');
-            label.textContent = task;
+            label.classList.add("tasklabel");
+            const noteslabel = document.createElement('label');
+            noteslabel.classList.add("tasklabel");
+            label.textContent = task.name;
+            noteslabel.textContent = task.notes;
             taskItem.appendChild(checkbox);
             taskItem.appendChild(label);
+            taskItem.appendChild(noteslabel);
             tasksList.appendChild(taskItem);
         });
 
@@ -202,6 +230,5 @@ function displayModules(modules, fileName) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', showTasks2);
-document.querySelector('.collapsible').addEventListener('click', toggleContent);
+// document.addEventListener('DOMContentLoaded', showTasks2);
 document.addEventListener('DOMContentLoaded', handleFileFromDatabase);

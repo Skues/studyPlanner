@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["pwd"];
-    $repeatpass = $_POST["psw-repeat"];
+
 
     try {
         require_once"dbh.inc.php";
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // ERROR HANDLING
 
         $errors = [];
-        if(is_input_empty($username, $email, $password, $repeatpass)) {
+        if(is_input_empty($username, $email, $password)) {
             $errors["empty_input"] = "Fill in all fields";
         }
 

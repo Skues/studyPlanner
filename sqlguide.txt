@@ -19,3 +19,20 @@ CREATE TABLE json_files (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+CREATE TABLE tasks(
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL, 
+    module_code VARCHAR(20) NOT NULL, 
+    cw_name VARCHAR(30) NOT NULL, 
+    task_name VARCHAR(20) NOT NULL,
+    task_start DATE NOT NULL,
+    task_end DATE NOT NULL,
+    task_timespent INT(3) NOT NULL, 
+    task_type VARCHAR(20) NOT NULL,
+    requirement VARCHAR(30) NOT NULL,
+    notes LONGTEXT NOT NULL,
+    task_done BOOLEAN NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    );
