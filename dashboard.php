@@ -3,19 +3,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
-<link rel="stylesheet" href="styles2.css">   
+<link rel="stylesheet" href="styles2.css?">   
 
 <head>
     <header>
         <nav class="navbar">
-            <img src="websiteTestLogo.png" alt="Test logo">
+            <img src="images/websiteTestLogo.png" alt="Test logo">
             <ul class="navlinks">
                 <li><a href="index.php">Home</a></li>
-                <li><a class="active" href="dashboard.php">Dashboard</a></li>
-                <li><a href="agenda.php">Agenda</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="jsontest.php">JSON TEST</a></li>
+                <li><a class = "active" href="dashboard.php">Dashboard</a></li>
                 <li><a href="gantt2.php">Calendar</a></li>
+                <li><a href="agenda.php">Tasks</a></li>
+                <li><a href="jsontest.php">Upload</a></li>
+                <li><a href="profile.php">Profile</a></li>
 
                 <!--<li class="logout"><a href="#logout">Logout</a></li>-->
             </ul>
@@ -37,7 +37,7 @@
     <div class="past-deadlines"></div>
     <div class="tasks-container"> </div>
     <div class="DivID"> </div>
-    <script src="dashboard.js"></script>
+    <script src="scripts/dashboard.js"></script>
 
 </body>
 </html>

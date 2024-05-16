@@ -17,18 +17,19 @@ require_once 'includes/login_view.inc.php';
     <body>
         <header>
         <nav class = "navbar">
-                <img src = "websiteTestLogo.png" alt = "Test logo">
+                <img src = "images/websiteTestLogo.png" alt = "Test logo">
             <ul class = "navlinks">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="agenda.php">Agenda</a></li>
+                <li><a href="gantt2.php">Calendar</a></li>
+                <li><a href="agenda.php">Tasks</a></li>
+                <li><a href="jsontest.php">Upload</a></li>
                 <li><a class = "active" href="profile.php">Profile</a></li>
-                <li><a href="jsontest.php">JSON TEST</a></li>
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->
             </ul>
         </header>
-        <h1>PROFILE</h1>
-        <h2>Modal Signup Form a a a a</h2> 
+        <h1>Profile</h1>
+        <h2>Sign Up or Login</h2> 
     <!--Step 1:Adding HTML-->
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> 
   

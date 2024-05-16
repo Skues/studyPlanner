@@ -6,7 +6,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #292929;
     padding: 10px 20px;
   }
 
@@ -15,7 +15,7 @@ img {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #292929;
   display: flex;
   }
 
@@ -36,7 +36,7 @@ img {
 
 
 li a:hover {
-  background-color: #111;
+  background-color: #000000;
 }
 
 .active {
@@ -260,6 +260,29 @@ select{
     z-index: 1000;
     word-wrap: break-word; /* Ensures long words break */
 }
+
+.info-window-name {
+    width: 150px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.info-window-end {
+    width: 150px;
+    display: inline-block;
+    align-self: right;
+    padding-bottom: 5px;
+}
+
+.info-window-requirement {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.info-window-notes {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 
 #task-container {
     position: relative;
