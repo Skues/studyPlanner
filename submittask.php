@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $module_code = "CS201";
     $cw_name = "Project";
 
-    $sql = "INSERT INTO tasks (user_id, module_code, cw_name, task_name, task_start, task_end, task_timespent, task_type, requirement, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tasks (user_id, module_code, cw_name, task_name, task_start, task_end, task_timespent, task_type, requirement, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("isssssssss", $user_id, $module_code, $cw_name, $taskname, $taskstart, $taskend, $timespent, $task_type, $requirement, $notes);
     $stmt->execute();
