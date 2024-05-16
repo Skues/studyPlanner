@@ -295,3 +295,21 @@ select{
     cursor: pointer;
     position: relative;
 }
+.welcome{
+    
+    border: 5px solid black;
+    padding: 8px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.welcome > h1{
+    font-family: "Mulish",sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+}
+mark.title{
+    color: #007bff;
+    background: none;
+}
