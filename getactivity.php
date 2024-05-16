@@ -18,22 +18,20 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 else{
-    // gettasks();
     $user_id = $_SESSION['user_id'];
-    $sql = "SELECT * FROM tasks WHERE user_id = $user_id";
+    $sql = "SELECT * FROM activities WHERE user_id = $user_id";
     $result = $conn->query($sql);
 
-    $taskarray = array();
+    $activitiesarray = array();
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            $taskarray[] = $row;   
+            $activitiesarray[] = $row;   
     }
-    echo json_encode($taskarray);
+    echo json_encode($activitiesarray);
 
 }
 }
-//function gettasks(){}
 
 $conn->close();
 

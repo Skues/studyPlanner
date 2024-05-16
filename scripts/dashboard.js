@@ -35,6 +35,7 @@ function handleFileFromDatabase() {
     fetchDataFromDatabase();
 }
 
+
 function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
     const currentDate = new Date();
     console.log(modules);
@@ -53,7 +54,7 @@ function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
                     console.log(module.module_code)
                     for (let i = 0; i < data.length; i++){
                         if (data[i].module_code == module.module_code && data[i].cw_name == coursework.name){
-                            taskArray.push({name : data[i].task_name, notes: data[i].notes , task_end: data[i].task_end , requirement: data[i].requirement});
+                            taskArray.push({name : data[i].task_name, notes: data[i].notes , task_end: data[i].task_end , requirement: data[i].requirement, task_type: data[i].task_type});
                             // taskNotesArray.push(data[i].notes)
                         }
                     }
@@ -196,13 +197,17 @@ function showTasks(tasks, deadlineItem) {
             infoWindowRequirement.textContent = "Requirement: " + task.requirement;
             infoWindow.appendChild(infoWindowRequirement);
 
+            const infoWindowType = document.createElement("div");
+            infoWindowType.classList.add("info-window-type");
+            infoWindowType.textContent = "Task type: " + task.task_type;
+            infoWindow.appendChild(infoWindowType);
+
             const infoWindowNotes = document.createElement("div");
             infoWindowNotes.classList.add("info-window-notes");
             infoWindowNotes.textContent = "Notes: " + task.notes;
             infoWindow.appendChild(infoWindowNotes);
   
             taskItem.appendChild(infoWindow);
-            
 
             taskItem.addEventListener("mouseover", () => {
                 infoWindow.style.display = "block";
@@ -273,6 +278,5 @@ function hideInfoWindow(listItem) {
     infoWindow.style.display = "none";
 }
 
-// document.addEventListener('DOMContentLoaded', showTasks2);
 document.addEventListener('DOMContentLoaded', handleFileFromDatabase);
 document.getElementsByClassName("tasklabel").onmouseover = function() {mouseOver()};
