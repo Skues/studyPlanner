@@ -9,16 +9,15 @@
     </head>
     <body>
         <header>
-            <nav class = "navbar">
-                <img src = "images/websiteTestLogo.png" alt = "Test logo">
+        <nav class = "navbar">
+                <img src = "images\websiteTestLogo.png" alt = "Test logo" class= "logo">
             <ul class = "navlinks">
-                <li><a class = "active" href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="gantt2.php">Calendar</a></li>
-                <li><a href="agenda.php">Tasks</a></li>
-                <li><a href="activities.php">Activities</a></li>
-                <li><a href="jsontest.php">Upload</a></li>
                 <li><a href="profile.php">Profile</a></li>
+                <li><a href="agenda.php">Agenda</a></li>
+                <li><a href="jsontest.php">Upload</a></li>
+                <li><a class = "active" href="gantt3.php">Calendar</a></li>
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->
             </ul>
             </nav>

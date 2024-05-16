@@ -48,6 +48,8 @@ $conn->close();
             <li><a href="profile.php">Profile</a></li>
             <li><a class="active" href="agenda.php">Agenda</a></li>
             <li><a href="jsontest.php">Upload</a></li>
+            <li><a href="gantt3.php">Calendar</a></li>
+
         </ul>
     </nav>
 </header>

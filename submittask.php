@@ -28,8 +28,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $requirement = $_POST["requirement"];
     $notes = $_POST["notes"];
 
-    $module_code = "CS201";
-    $cw_name = "Project";
+    $module_code = "CS101";
+    $cw_name = "Assignment 1";
 
     $sql = "INSERT INTO tasks (user_id, module_code, cw_name, task_name, task_start, task_end, task_timespent, task_type, requirement, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
