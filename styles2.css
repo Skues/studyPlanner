@@ -244,7 +244,31 @@ select{
 }
 
 .tasklabel{
-    padding: 8px;
-    border: 2px solid #ccc;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.info-window {
+    display: none;
+    position: absolute;
+    width: 300px; /* Fixed width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    z-index: 1000;
+    word-wrap: break-word; /* Ensures long words break */
+}
+
+#task-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.taskdiv {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
 }

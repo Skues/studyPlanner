@@ -32,6 +32,7 @@
     <div class="upcoming-deadlines"></div>
     <div class="section-gap-lesser"></div>
 
+
     <h2>Past Deadlines:</h2>
     <div class="past-deadlines"></div>
     <div class="tasks-container"> </div>

@@ -48,7 +48,7 @@ function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
             fetch("gettask.php")
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data.length); // Log the fetched data
+                    console.log(data); // Log the fetched data
                     console.log(coursework.name)
                     console.log(module.module_code)
                     for (let i = 0; i < data.length; i++){
@@ -103,7 +103,7 @@ function displayDeadlines() {
         deadlineItem.innerHTML = `<span class="module-content">${deadline.moduleCode} - ${deadline.moduleName} - ${deadline.name}: Deadline ${deadline.deadline.toDateString()}</span>`;
 
         deadlineItem.appendChild(viewTasksButton);
-        const tasksList = document.createElement('ul');
+        const tasksList = document.createElement('div');
         if (deadline.deadline > new Date()) {
             upcomingDeadlinesContainer.appendChild(deadlineItem);
         } else {
@@ -140,7 +140,7 @@ function showTasks2() {
 }
 
 function showTasks(tasks, deadlineItem) {
-    const tasksList = deadlineItem.querySelector('ul');
+    const tasksList = deadlineItem.querySelector('div');
     tasksList.innerHTML = '';
 
     let completedTasks = 0;
@@ -159,7 +159,8 @@ function showTasks(tasks, deadlineItem) {
         }
 
         tasks.forEach(task => {
-            const taskItem = document.createElement('li');
+            const taskItem = document.createElement('div');
+            taskItem.setAttribute("id", "task-container");
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.addEventListener('change', function() {
@@ -170,16 +171,35 @@ function showTasks(tasks, deadlineItem) {
                 }
                 updateProgressBar(progressBar, completedTasks, totalTasks);
             });
-            const label = document.createElement('label');
-            label.classList.add("tasklabel");
-            const noteslabel = document.createElement('label');
-            noteslabel.classList.add("tasklabel");
+            const label = document.createElement('div');
+            label.classList.add("taskdiv");
             label.textContent = task.name;
-            noteslabel.textContent = task.notes;
-            taskItem.appendChild(checkbox);
+            label.appendChild(checkbox);
             taskItem.appendChild(label);
-            taskItem.appendChild(noteslabel);
             tasksList.appendChild(taskItem);
+
+            const infoWindow = document.createElement("div");
+            infoWindow.classList.add("info-window");
+            const infoWindowName = document.createElement("div");
+            infoWindowName.classList.add("info-window-name");
+            infoWindowName.textContent = task.name;
+            infoWindow.appendChild(infoWindowName);
+
+            const infoWindowNotes = document.createElement("div");
+            infoWindowNotes.classList.add("info-window-notes");
+            infoWindowNotes.textContent = task.notes;
+            infoWindow.appendChild(infoWindowNotes);
+  
+            taskItem.appendChild(infoWindow);
+            
+
+            taskItem.addEventListener("mouseover", () => {
+                infoWindow.style.display = "block";
+            });
+
+            taskItem.addEventListener("mouseout", () => {
+                infoWindow.style.display = "none";
+            });
         });
 
         updateProgressBar(progressBar, completedTasks, totalTasks);
@@ -230,5 +250,21 @@ function displayModules(modules, fileName) {
     });
 }
 
+// Function to show info window
+// Function to show info window
+function showInfoWindow(listItem, info) {
+    const infoWindow = listItem.querySelector(".info-window");
+    infoWindow.style.display = "block";
+    infoWindow.style.left = `${listItem.offsetWidth / 2 - infoWindow.offsetWidth / 2}px`;
+    infoWindow.style.top = `${listItem.offsetHeight / 2 - infoWindow.offsetHeight / 2}px`;
+}
+
+// Function to hide info window
+function hideInfoWindow(listItem) {
+    const infoWindow = listItem.querySelector(".info-window");
+    infoWindow.style.display = "none";
+}
+
 // document.addEventListener('DOMContentLoaded', showTasks2);
 document.addEventListener('DOMContentLoaded', handleFileFromDatabase);
+document.getElementsByClassName("tasklabel").onmouseover = function() {mouseOver()};
