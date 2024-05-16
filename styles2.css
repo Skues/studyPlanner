@@ -19,6 +19,15 @@ img {
   display: flex;
   }
 
+.navbarProfile{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #292929;
+    padding: 10px 20px;
+  }
+  
+
   .navlinks li {
     margin-left: 0px;
 
@@ -37,10 +46,18 @@ img {
 
 li a:hover {
   background-color: #000000;
+  border-radius: 25px;
+
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: #007bff;
+    border-radius: 25px;
+  }
+
+  .activeProfile{
+    background-color: #ff7f0e;
+    border-radius: 25px;
   }
 
 
@@ -181,6 +198,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.profileBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #292929;
+}
+
 .progress {
     height: 20px;
     margin-right: 75%;
@@ -315,10 +337,9 @@ mark.title{
 }
 .welcomePara{
     font-size: 60px;
-    margin-left: 300px;
-
+    text-align: center;
 }
-.getStarted{
+.centreTitle{
     font-size: 60px;
     text-align: center;
 
@@ -344,5 +365,69 @@ mark.title{
     background-color: #45a049; /* Darker Green */
     box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.4);
 }
+
+
+.imageCentre {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    
+}
+
+
+
+.profileHeader {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e9e2e2;
+  }
+  
+ 
+  
+  .profileSignupButton, .profileLoginButton {
+    /* Your common button styles */
+    padding: 25px 50px; 
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    font-size: 40px; 
+    cursor: pointer;
+    border-radius: 30px; 
+    transition-duration: 0.4s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+
+  .profileButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profileSignupButton {
+    background-color: #ff7f0e; 
+    color: white;
+    margin-right: 0px;
+    padding: -200px;
+  }
+  
+  .profileSignupButton:hover {
+    background-color: #ff9e6e; 
+  }
+  
+  .profileLoginButton {
+    background-color: white; 
+    border: 2px solid #ccc; 
+    color: #333; /
+
+  }
+  
+  .profileLoginButton:hover {
+    background-color: #bcc0ba; 
+  }
+  
+  
+  
 
 
