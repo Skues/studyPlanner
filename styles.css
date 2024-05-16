@@ -1,5 +1,3 @@
-/* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
     --white: #fff;
     --divider: lightgrey;
@@ -29,14 +27,10 @@
   }
   
   .chart-wrapper {
-    max-width: 1150px;
     padding: 0 10px;
     margin: 0 auto;
   }
   
-  
-  /* CHART-VALUES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .chart-wrapper .chart-values {
     position: relative;
     display: flex;
@@ -64,9 +58,6 @@
     border-right: 1px solid var(--divider);
   }
   
-  
-  /* CHART-BARS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .chart-wrapper .chart-bars li {
     position: relative;
     color: var(--white);
@@ -85,9 +76,7 @@
     }
   }
   
-  
-  /* FOOTER
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
   .page-footer {
     font-size: 0.85rem;
     padding: 10px;
@@ -97,4 +86,21 @@
   
   .page-footer span {
     color: #e31b23;
+  }
+
+  div.scroll {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scroll a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scroll a:hover {
+    background-color: #777;
   }

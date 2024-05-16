@@ -159,4 +159,7 @@ function addListElementsWithDateRange(ulSelector) {
 document.addEventListener('DOMContentLoaded', handleFileFromDatabase);
 window.addEventListener("resize", createChart);
 
-
+// Fetch and process the data
+function handleFileFromDatabase() {
+    fetchDataFromDatabase();
+}

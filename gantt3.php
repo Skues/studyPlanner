@@ -25,10 +25,11 @@
 
             
         </header>
-
-        <div class="chart-wrapper">
-            <ul class="chart-values"></ul>
-            <ul class="chart-bars"></ul>
+        <div class = "scroll">
+            <div class="chart-wrapper">
+                <ul class="chart-values"></ul>
+                <ul class="chart-bars"></ul>
+            </div>
         </div>
 
 
