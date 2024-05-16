@@ -313,3 +313,36 @@ mark.title{
     color: #007bff;
     background: none;
 }
+.welcomePara{
+    font-size: 60px;
+    margin-left: 300px;
+
+}
+.getStarted{
+    font-size: 60px;
+    text-align: center;
+
+}
+.DBloginButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 25px 50px; /* Increased padding for a bigger button */
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Change display to block to center horizontally */
+    width: fit-content; /* Set width to fit content */
+    margin: 0 auto; /* Center alignment */
+    font-size: 24px; /* Increased font size */
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.DBloginButton:hover {
+    background-color: #45a049; /* Darker Green */
+    box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.4);
+}
+
+
