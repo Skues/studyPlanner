@@ -30,7 +30,7 @@
         </div>
 
         <p class = "welcomePara">Manage your assignments, deadlines and tasks.</p>
-        <h1 class = "getStarted">Get Started Now!</h1>
+        <h1 class = "centreTitle">Get Started Now!</h1>
         <button class="DBloginButton">Login</button>
 
 
