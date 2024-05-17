@@ -85,7 +85,6 @@ $result = $conn->query($query);
         ?>
     </ul>
 
-    <a href="logout.php">Logout</a>
 </body>
 
 </html>

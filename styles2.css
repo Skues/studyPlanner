@@ -248,24 +248,28 @@ body {
 }
 
 .studytask{
-    display: inline-block;
+    display: inline;
 }
 .studytasklabel{
     display: block;
 }
-.studytask > input{
-    width: 100%; 
-    padding: 12px 20px; 
-    margin: 8px 0; 
-    display: inline-block; 
-    border: 2px solid #ccc; 
-    box-sizing: border-box; 
+.studytask > input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px; 
 }
+
 select{
-    width: 200px; 
+    width: 50%; 
     height: 42px;
     padding: 5px; 
     text-align: left;
+    border-radius: 10px; 
+
 
 }
 
@@ -276,6 +280,19 @@ select{
     margin: 8px 0;
     line-height: 1; 
     resize: none;
+    border-radius: 10px; 
+
+}
+
+#activitynotes {
+    width: 400px;
+    height: 100px;
+    padding: 8px;
+    margin: 8px 0;
+    line-height: 1; 
+    resize: none;
+    border-radius: 10px; 
+
 }
 
 .tasklabel{
@@ -295,6 +312,7 @@ select{
     z-index: 1000;
     word-wrap: break-word; /* Ensures long words break */
 }
+
 
 .info-window-name {
     width: 150px;
