@@ -20,6 +20,8 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
+    $module_code = $_POST["module_code"];
+    $cw_name = $_POST["cw_name"];
     $taskname = $_POST["taskname"];
     $taskstart = $_POST["taskstart"];
     $taskend = $_POST["taskend"];
@@ -28,8 +30,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $requirement = $_POST["requirement"];
     $notes = $_POST["notes"];
 
-    $module_code = "CS201";
-    $cw_name = "Project";
 
     $sql = "INSERT INTO tasks (user_id, module_code, cw_name, task_name, task_start, task_end, task_timespent, task_type, requirement, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);

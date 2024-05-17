@@ -35,6 +35,8 @@ $conn->close();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 <title>Agenda</title>
 <link rel="stylesheet" href="styles2.css">   
 </head>
@@ -52,8 +54,16 @@ $conn->close();
     </nav>
 </header>
 
-<h3>Exams and coursework names</h3>
+<h3>Add tasks</h3>
 <form id="taskform" action="submittask.php" method="post">
+    <div class="studytask">
+        <label class="studytasklabel">Module code</label>
+        <input type="text" name="module_code" required />
+    </div>
+    <div class="studytask">
+        <label class="studytasklabel">Coursework name</label>
+        <input type="text" name="cw_name" required />
+    </div>
     <div class="studytask">
         <label class="studytasklabel">Task name</label>
         <input type="text" name="taskname" required />
