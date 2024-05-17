@@ -35,7 +35,6 @@ require_once 'includes/login_view.inc.php';
         </div>
 
         <h2 class = "profileHeader">Sign Up or Login</h2> 
-    <!--Step 1:Adding HTML-->
     <div class="profileButtonContainer">
     <button class = "profileSignupButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> 
     </div>

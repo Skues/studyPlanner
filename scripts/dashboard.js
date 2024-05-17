@@ -45,13 +45,13 @@ function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
             fetch("gettask.php")
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data); // Log the fetched data
+                    console.log(data); 
                     console.log(coursework.name)
                     console.log(module.module_code)
                     for (let i = 0; i < data.length; i++){
                         if (data[i].module_code == module.module_code && data[i].cw_name == coursework.name){
                             taskArray.push({name : data[i].task_name, notes: data[i].notes , task_end: data[i].task_end , requirement: data[i].requirement});
-                            // taskNotesArray.push(data[i].notes)
+                            
                         }
                     }
 
@@ -110,31 +110,6 @@ function displayDeadlines() {
     });
 }
 
-function showTasks2() {
-    console.log("b array print");
-    fetch("gettask.php")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.length); // Log the fetched data
-            for (let i = 0; i < data.length; i++){
-                const ul = document.getElementById("taskarraytest"); 
-                const node = document.createElement("li");
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                const text = document.createElement("label");
-                text.textContent = data[i].task_name;
-            
-                node.appendChild(checkbox);
-                node.appendChild(text);
-                ul.appendChild(node);
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
-    console.log("after array print");
-    
-}
 
 function showTasks(tasks, deadlineItem) {
     const tasksList = deadlineItem.querySelector('div');

@@ -18,7 +18,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 else{
-    // gettasks();
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT * FROM tasks WHERE user_id = $user_id";
     $result = $conn->query($sql);
@@ -33,7 +32,6 @@ else{
 
 }
 }
-//function gettasks(){}
 
 $conn->close();
 

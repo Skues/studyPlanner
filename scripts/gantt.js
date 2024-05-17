@@ -1,7 +1,6 @@
 let allDataSets = [];
 
 
-// Fetch and process the data from the database
 function fetchDataFromDatabase() {
     return fetch('jsonget.php')
         .then(response => response.json())
@@ -9,23 +8,21 @@ function fetchDataFromDatabase() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-// Handle the data fetched from the database
 function handleDatabaseData(filesArray) {
-    console.log(filesArray[0]);
     const modules = filesArray[0].modules;
 
-    // Use Promise.all to wait for all createDataSet promises to resolve
+    
     Promise.all(modules.map(module => createDataSet(module)))
         .then(() => {
-            logAllTaskInformation();
+            processAllTaskInformation();
             findEarliestAndLatestDates();
-            addListElementsWithDateRange(".chart-values"); // Add list elements
-            createChart(); // Ensure createChart is called after list elements are added
+            addListElementsWithDateRange(".chart-values"); 
+            createChart(); 
         })
         .catch(error => console.error('Error processing modules:', error));
 }
 
-// Create datasets for each module and their coursework
+
 function createDataSet(module) {
     return new Promise((resolve, reject) => {
         const courseworkPromises = module.coursework.map(coursework => {
@@ -77,21 +74,18 @@ function findEarliestAndLatestDates() {
         });
     });
 
-    console.log('Earliest Date:', earliestDate.toISOString().split('T')[0]);
-    console.log('Latest Date:', latestDate.toISOString().split('T')[0]);
+ 
 
     return { earliestDate, latestDate };
 }
 
-// Log all task information
-function logAllTaskInformation() {
+
+function processAllTaskInformation() {
     const chartUl = document.querySelector(".chart-bars");
-    chartUl.innerHTML = ''; // Clear existing elements
+    chartUl.innerHTML = ''; 
 
     allDataSets.forEach((dataSet, index) => {
-        console.log(`DataSet ${index + 1}:`, dataSet);
-        console.log(`Tasks for DataSet ${index + 1}:`, dataSet.tasks);
-
+    
         dataSet.tasks.forEach(task => {
             console.log(task);
             const newEntry = document.createElement("li");
@@ -105,7 +99,6 @@ function logAllTaskInformation() {
     });
 }
 
-// Create and style the chart
 function createChart() {
     const days = document.querySelectorAll(".chart-values li");
     const tasks = document.querySelectorAll(".chart-bars li");
@@ -127,11 +120,10 @@ function createChart() {
         task.style.left = `${left}px`;
         task.style.width = `${width}px`;
         task.style.backgroundColor = task.dataset.color;
-        task.style.opacity = 1; // Ensure this gets applied when the page loads
+        task.style.opacity = 1; 
     });
 }
 
-// Function to add list elements with date range
 function addListElementsWithDateRange(ulSelector) {
     const chartUl = document.querySelector(ulSelector);
     if (!chartUl) {
@@ -139,10 +131,8 @@ function addListElementsWithDateRange(ulSelector) {
         return;
     }
 
-    // Find the earliest and latest dates
     const { earliestDate, latestDate } = findEarliestAndLatestDates();
 
-    // Loop through dates from the earliest to the latest
     const currentDate = new Date(earliestDate);
     while (currentDate <= latestDate) {
         const newEntry = document.createElement("li");
@@ -152,10 +142,8 @@ function addListElementsWithDateRange(ulSelector) {
         currentDate.setDate(currentDate.getDate() + 1);
     }
 
-    console.log(`Added elements to ${ulSelector}`);
 }
 
-// Initialize the process
 document.addEventListener('DOMContentLoaded', fetchDataFromDatabase);
 window.addEventListener("resize", createChart);
 

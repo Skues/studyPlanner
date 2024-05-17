@@ -69,7 +69,7 @@ li a:hover {
     display: inline-block; 
     border: 2px solid #ccc; 
     box-sizing: border-box; 
-    border-radius: 10px; /* Adjust the value to change the roundness */
+    border-radius: 10px; 
 } 
 
 
@@ -113,11 +113,11 @@ button {
   
 .modal-content {
     padding: 16px;
-    background-color: #3c3c40; /* Updated background color */
+    background-color: #3c3c40;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
     width: 80%;
-    border-radius: 10px; /* Add border radius for rounded corners */
+    border-radius: 10px; 
 }
 
 label > b{
@@ -305,12 +305,12 @@ select{
 .info-window {
     display: none;
     position: absolute;
-    width: 300px; /* Fixed width */
+    width: 300px; 
     padding: 10px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     z-index: 1000;
-    word-wrap: break-word; /* Ensures long words break */
+    word-wrap: break-word; 
 }
 
 
@@ -393,7 +393,7 @@ mark.title{
 }
 
 .DBloginButton:hover {
-    background-color: #45a049; /* Darker Green */
+    background-color: #45a049; 
     box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.4);
 }
 
@@ -401,8 +401,8 @@ mark.title{
 .imageCentre {
     padding-top: 100px;
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
+    justify-content: center; 
+    align-items: center; 
     
 }
 .imageCentre > img{
@@ -423,7 +423,7 @@ mark.title{
  
   
   .profileSignupButton, .profileLoginButton {
-    /* Your common button styles */
+    
     padding: 25px 50px; 
     text-align: center;
     text-decoration: none;

@@ -16,7 +16,6 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// Fetch tasks for the user to display in the dropdown
 $tasks_sql = "SELECT id, task_name FROM tasks WHERE user_id = ?";
 $tasks_stmt = $conn->prepare($tasks_sql);
 $tasks_stmt->bind_param("i", $user_id);
