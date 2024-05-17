@@ -93,7 +93,7 @@ button {
 .cancelbtn, 
 .signupbtn { 
     cursor: pointer;
-    width:49.8%;
+    width:49.7%;
 } 
 
   
@@ -338,11 +338,13 @@ select{
 
 
 #task-container {
+    width: 300px;
     position: relative;
     margin-bottom: 20px;
 }
 
 .taskdiv {
+    width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
     cursor: pointer;

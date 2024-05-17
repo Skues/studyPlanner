@@ -99,6 +99,7 @@ function processAllTaskInformation() {
     });
 }
 
+/* https://webdesign.tutsplus.com/build-a-simple-gantt-chart-with-css-and-javascript--cms-33813t */
 function createChart() {
     const days = document.querySelectorAll(".chart-values li");
     const tasks = document.querySelectorAll(".chart-bars li");
