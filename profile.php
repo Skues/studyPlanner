@@ -9,7 +9,7 @@ require_once 'includes/login_view.inc.php';
 <html>
     <head>
         <title>Profile</title>
-        <link rel="stylesheet" type="text/css" href="styles2.css">
+        <link rel="stylesheet" type="text/css" href="styles2.css?">
 
         <script src="scripts.js"></script>
 

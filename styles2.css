@@ -418,11 +418,11 @@ mark.title{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e9e2e2;
-  }
+}
   
  
   
-  .profileSignupButton, .profileLoginButton {
+.profileSignupButton, .profileLoginButton {
     
     padding: 25px 50px; 
     text-align: center;
@@ -433,37 +433,45 @@ mark.title{
     border-radius: 30px; 
     transition-duration: 0.4s;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
+}
   
 
-  .profileButtonContainer {
+.profileButtonContainer {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .profileSignupButton {
+.profileSignupButton {
     background-color: #ff7f0e; 
     color: white;
     margin-right: 0px;
     padding: -200px;
-  }
+}
   
-  .profileSignupButton:hover {
+.profileSignupButton:hover {
     background-color: #ff9e6e; 
-  }
+}
   
-  .profileLoginButton {
+.profileLoginButton {
     background-color: white; 
     border: 2px solid #ccc; 
     color: #333; /
 
-  }
+}
   
-  .profileLoginButton:hover {
+.profileLoginButton:hover {
     background-color: #bcc0ba; 
-  }
+}
+
+.form-error{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e9e2e2;
+}
   
   
-  
+
 
 
