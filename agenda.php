@@ -50,11 +50,13 @@ $conn->close();
             <li><a href="profile.php">Profile</a></li>
             <li><a class="active" href="agenda.php">Agenda</a></li>
             <li><a href="jsontest.php">Upload</a></li>
+            <li><a href="gantt3.php">Calendar</a></li>
+
         </ul>
     </nav>
 </header>
 
-<h3>Add tasks</h3>
+<h3>Add Tasks</h3>
 <form id="taskform" action="submittask.php" method="post">
     <div class="studytask">
         <label class="studytasklabel">Module code</label>
@@ -81,7 +83,7 @@ $conn->close();
         <input type="text" name="timespent" required />
     </div>
     <div class="studytask">
-        <label for="typeoftask">Type of task:</label>
+        <label class="studytasklabel">Type of task</label>
         <select name="task_type" required>
             <option value="Writing">Writing</option>
             <option value="Programming">Programming</option>

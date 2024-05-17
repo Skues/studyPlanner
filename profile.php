@@ -23,6 +23,8 @@ require_once 'includes/login_view.inc.php';
                 <li><a class = "activeProfile" href="profile.php">Profile</a></li>
                 <li><a href="agenda.php">Agenda</a></li>
                 <li><a href="jsontest.php">Upload</a></li>
+                <li><a href="gantt3.php">Calendar</a></li>
+
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->
             </ul>
             </nav>
@@ -64,7 +66,7 @@ require_once 'includes/login_view.inc.php';
   
     <div id="id02" class="modal"> 
         <form class="modal-content login" action="includes\login.inc.php"  method="post"> 
-                <label for = "username"><b>username</b></label> 
+                <label for = "username"><b>Username</b></label> 
                 <input type="text" placeholder="Enter Username" name="username"> 
   
                 <label for = "password"><b>Password</b></label> 

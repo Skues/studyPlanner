@@ -31,9 +31,6 @@ function fetchDataFromDatabase() {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-function handleFileFromDatabase() {
-    fetchDataFromDatabase();
-}
 
 function extractDeadlines(modules, upcomingDeadlines, pastDeadlines) {
     const currentDate = new Date();
@@ -274,5 +271,5 @@ function hideInfoWindow(listItem) {
 }
 
 // document.addEventListener('DOMContentLoaded', showTasks2);
-document.addEventListener('DOMContentLoaded', handleFileFromDatabase);
+document.addEventListener('DOMContentLoaded', fetchDataFromDatabase);
 document.getElementsByClassName("tasklabel").onmouseover = function() {mouseOver()};

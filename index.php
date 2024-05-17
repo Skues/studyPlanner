@@ -17,6 +17,8 @@
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="agenda.php">Agenda</a></li>
                 <li><a href="jsontest.php">Upload</a></li>
+                <li><a href="gantt3.php">Calendar</a></li>
+
                 <!--<li class = "logout"><a href ="#logout">Logout</a></li>-->
             </ul>
             </nav>

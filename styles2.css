@@ -62,33 +62,38 @@ li a:hover {
 
 
 
-.modal-content > input{
+  .modal-content > input{
     width: 100%; 
     padding: 12px 20px; 
     margin: 8px 0; 
     display: inline-block; 
     border: 2px solid #ccc; 
     box-sizing: border-box; 
+    border-radius: 10px; /* Adjust the value to change the roundness */
 } 
 
-button { 
-    /* color: white;  */
-    padding: 14px 20px; 
-    margin: 8px 0; 
-    cursor: pointer; 
-} 
 
-.cancelbtn { 
-    background-color: red; 
-} 
-.signupbtn{
+button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    border: none; 
+    border-radius: 10px; 
+}
+
+.cancelbtn {
+    background-color: rgb(224, 8, 8);
+}
+
+.signupbtn {
     background-color: green;
 }
+
 
 .cancelbtn, 
 .signupbtn { 
     cursor: pointer;
-    width: 49%;
+    width:49.8%;
 } 
 
   
@@ -106,13 +111,20 @@ button {
     padding-top: 60px; 
 } 
   
-.modal-content { 
+.modal-content {
     padding: 16px;
-    background-color: #fefefe; 
-    margin: 5% auto 15% auto; 
-    border: 1px solid #888; 
-    width: 80%; 
-} 
+    background-color: #3c3c40; /* Updated background color */
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+label > b{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
   
 .close { 
     position: absolute; 
@@ -203,6 +215,7 @@ body {
     background-color: #292929;
 }
 
+
 .progress {
     height: 20px;
     margin-right: 75%;
@@ -235,24 +248,28 @@ body {
 }
 
 .studytask{
-    display: inline-block;
+    display: inline;
 }
 .studytasklabel{
     display: block;
 }
-.studytask > input{
-    width: 100%; 
-    padding: 12px 20px; 
-    margin: 8px 0; 
-    display: inline-block; 
-    border: 2px solid #ccc; 
-    box-sizing: border-box; 
+.studytask > input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px; 
 }
+
 select{
-    width: 200px; 
+    width: 50%; 
     height: 42px;
     padding: 5px; 
     text-align: left;
+    border-radius: 10px; 
+
 
 }
 
@@ -263,6 +280,19 @@ select{
     margin: 8px 0;
     line-height: 1; 
     resize: none;
+    border-radius: 10px; 
+
+}
+
+#activitynotes {
+    width: 400px;
+    height: 100px;
+    padding: 8px;
+    margin: 8px 0;
+    line-height: 1; 
+    resize: none;
+    border-radius: 10px; 
+
 }
 
 .tasklabel{
@@ -282,6 +312,7 @@ select{
     z-index: 1000;
     word-wrap: break-word; /* Ensures long words break */
 }
+
 
 .info-window-name {
     width: 150px;
@@ -345,16 +376,16 @@ mark.title{
 
 }
 .DBloginButton {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
-    padding: 25px 50px; /* Increased padding for a bigger button */
+    padding: 25px 50px; 
     text-align: center;
     text-decoration: none;
-    display: block; /* Change display to block to center horizontally */
-    width: fit-content; /* Set width to fit content */
-    margin: 0 auto; /* Center alignment */
-    font-size: 24px; /* Increased font size */
+    display: block; 
+    width: fit-content; 
+    margin: 0 auto; 
+    font-size: 24px; 
     cursor: pointer;
     border-radius: 10px;
     transition-duration: 0.4s;

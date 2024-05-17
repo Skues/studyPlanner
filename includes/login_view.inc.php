@@ -14,8 +14,8 @@ function check_login_errors(){
         }
         unset($_SESSION["errors_login"]);
     
-    } else if(isset($_GET["login"]) && $_GET["login"] === "sucess"){
+    } else if(isset($_GET["login"]) && $_GET["login"] === "success"){
         echo "<br>";
-        echo "<p>Login Sucess!</p>";
+        echo "<p class= 'welcomePara' >Login Sucess!</p>";
     }
 }

@@ -97,7 +97,7 @@ function logAllTaskInformation() {
             const newEntry = document.createElement("li");
             newEntry.setAttribute('data-start', task.task_start);
             newEntry.setAttribute('data-end', task.task_end);
-            newEntry.setAttribute('data-color', '#da6f2b');
+            newEntry.setAttribute('data-color', '#007bff');
 
             newEntry.textContent = task.name;
             chartUl.appendChild(newEntry);
@@ -111,9 +111,9 @@ function createChart() {
     const tasks = document.querySelectorAll(".chart-bars li");
     const daysArray = [...days];
 
-    tasks.forEach(el => {
-        const startDate = new Date(el.dataset.start);
-        const endDate = new Date(el.dataset.end);
+    tasks.forEach(task => {
+        const startDate = new Date(task.dataset.start);
+        const endDate = new Date(task.dataset.end);
         let left = 0,
             width = 0;
 
@@ -124,10 +124,10 @@ function createChart() {
         left = startIndex * dayWidth;
         width = (endIndex - startIndex + 1) * dayWidth;
 
-        el.style.left = `${left}px`;
-        el.style.width = `${width}px`;
-        el.style.backgroundColor = el.dataset.color;
-        el.style.opacity = 1; // Ensure this gets applied when the page loads
+        task.style.left = `${left}px`;
+        task.style.width = `${width}px`;
+        task.style.backgroundColor = task.dataset.color;
+        task.style.opacity = 1; // Ensure this gets applied when the page loads
     });
 }
 
@@ -156,10 +156,7 @@ function addListElementsWithDateRange(ulSelector) {
 }
 
 // Initialize the process
-document.addEventListener('DOMContentLoaded', handleFileFromDatabase);
+document.addEventListener('DOMContentLoaded', fetchDataFromDatabase);
 window.addEventListener("resize", createChart);
 
-// Fetch and process the data
-function handleFileFromDatabase() {
-    fetchDataFromDatabase();
-}
+
